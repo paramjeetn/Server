@@ -2,14 +2,16 @@ import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema(
 
-    {   username:{
+    {   userId:{
+        type: Number,
+         },
+         username:{
             type: String,
             required: true,
-        }, 
-       
+         },
         name: {
             type: String,
-            required: true,
+            
         },
         password: {
             type: String,
@@ -21,10 +23,13 @@ const UserSchema = new mongoose.Schema(
             unique: true,
         },
         coverPic:{
-             type: String,
+            type: String,
+        },
+        profilePic:{
+            type: String,
         },
         city:{
-             type: String,
+            type: String,
         },
 
     }
